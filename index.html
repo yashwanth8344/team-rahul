@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gamified LMS Portal</title>
+    <!-- You can link your CSS files and libraries here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="hack.jpg" alt="Gamified LMS Logo">
+        </div>
+        <h1>Welcome to the Gamified Learning Portal</h1>
+        <!-- ... (Other parts of your HTML) ... -->
+        
+        <nav>
+            <ul>
+                <li><a href="#homeSection"><a href="index.html">Home</a></li>
+                <li><a href="#coursesSection"><a href="corses.html">Courses</a></li>
+                <li><a href="#profileSection"><a href="profile.html">Profile</a></a></li>
+                <li><a href="#codingGameSection"><a href="game.html">Gamecode</a></a></li>
+                <li><a href="leader.html">LeaderBoard</a></li>
+                <li><a href="#logoutSection"><a href="logout.html">Logout</a></li>
+                <!-- <img src="hack2.jpg" alt="Gamified LMS Logo"> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="courses">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header"><B>OPEN Source Notes</B></div>
+                    <div class="accordion-header">
+                        <p><a href="https://www.codewithharry.com/notes/"><button>NOTES</button></a></p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><B>PYTHON Complete Course</B></div>
+                    <div class="accordion-content">
+                        <p><a href="https://youtu.be/6i3EGqOBRiU?si=IOZNMwFPjaxWIQKg"><button>PYTHON</button></a></p>
+                    </div>
+                </div>
+                <!-- <div class="accordion-item">
+                    <div class="accordion-header"><B></B></div>
+                    <div class="accordion-content">
+                        <p><b></b>Content for Section 3 goes here.</p>
+                    </div>
+                </div> -->
+            </div>
+            <!-- More course cards can be added here -->
+        </section>
+        <section class="login">
+            <div class="input-group">
+                <label for="username">Email  : </label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <a href="login.html"><button type="submit">Login</button></a></button>
+            </form>
+            <div class="forgot-password">
+                <a href="forgotpass.html">Forgot Password?</a>
+            </div>
+            <div class="signup">
+                <p>Don't have an account?</p>
+                <a href="signup.html"><button>Sign-UP</button></a>
+            </div>
+            </form>
+        </section>
+          
+        <footer>
+            <p>&copy; 2023 Gamified LMS. All rights reserved.</p>
+        </footer>
+        <script>
+            // Get all accordion items
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            // Add click event listener to each accordion header
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    // Toggle active class to expand/collapse content
+                    item.classList.toggle('active');
+                    const content = item.querySelector('.accordion-content');
+                    if (item.classList.contains('active')) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+
+        </script>
+</body>
+
+</html>

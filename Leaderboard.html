@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/leader.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .leaderboard-container {
+      width: 80%;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .leaderboard-title {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      font-size: 24px;
+      text-align: center;
+      border-bottom: 2px solid #34495e;
+      border-radius: 8px 8px 0 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    nav ul li{
+      align-items: top center;
+    }
+    nav {
+  text-align: center;
+  background-color: #2c3e50;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+    
+  </style>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/leader.html#homeSection"></a><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/leader.html#coursesSection"></a><a href="http://127.0.0.1:5500/corses.html">Courses</a></li>
+        <li><a href="http://127.0.0.1:5500/leader.html#profileSection"></a><a href="http://127.0.0.1:5500/profile.html">Profile</a></li>
+        <li><a href="http://127.0.0.1:5500/leader.html#codingGameSection"></a><a href="http://127.0.0.1:5500/game.html">Gamecode</a></li>
+        <li><a href="http://127.0.0.1:5500/leader.html">LeaderBoard</a></li>
+        <li><a href="http://127.0.0.1:5500/leader.html#logoutSection"></a><a href="http://127.0.0.1:5500/logout.html">Logout</a></li>
+        <!-- <img src="hack2.jpg" alt="Gamified LMS Logo"> -->
+    </ul>
+</nav>
+
+  <div class="leaderboard-container">
+    <div class="leaderboard-title">
+      Top Coders Score
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Adding 20 rows for the leaderboard with random names -->
+        <tr>
+          <td>1</td>
+          <td>CodeMaster1</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>CoderGenius</td>
+          <td>950</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AlgorithmWizard</td>
+          <td>900</td>
+        </tr>
+        <!-- Add more rows up to 20 with random names -->
+        <!-- Example using placeholder names -->
+        <tr>
+          <td>4</td>
+          <td>CodingGuru</td>
+          <td>850</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ProgrammerPro</td>
+          <td>800</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>CodeNinja</td>
+          <td>750</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ScriptingMaestro</td>
+          <td>700</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>DevGenius</td>
+          <td>650</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>CoderWhiz</td>
+          <td>600</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>CodeEnthusiast</td>
+          <td>550</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>AlgorithmMaster</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>CodingProdigy</td>
+          <td>450</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>ScriptingExpert</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td>14</td></tr></tbody></table></div></body></html>

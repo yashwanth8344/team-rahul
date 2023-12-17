@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('GAME_bg.jpg');
+            align-items:baseline;
+
+        }
+
+        #game-container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            align-items: center;
+        }
+
+        #code-snippet {
+            font-family: monospace;
+            font-size: 16px;
+            white-space: pre-wrap;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        #guess-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        #next-button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        #next-button:hover {
+            background-color: #45a049;
+            align-items: center;
+
+        }
+        nav ul {
+    list-style-type: none;
+    align-items: end;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+
+}
+nav ul li a:hover{
+    text-decoration: dashed;
+    text-decoration: underline;
+}
+
+nav ul li{
+    align-items: end;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    display: inline;
+}
+.navbar li {
+    margin-left: 20px; /* Adjust spacing between items */
+}
+
+.navbar li:first-child {
+    margin-left: auto; /* Pushes items to the right */
+}
+
+.navbar a {
+    text-decoration: none;
+    text-decoration: wavy;
+    color: #333;
+}
+.bar {
+    width: 60%; /* Change this width based on progress */
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 3px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#homeSection"><a href="index.html">Home</a></li>
+            <li><a href="#coursesSection"><a href="corses.html">Courses</a></li>
+            <li><a href="#profileSection"><a href="profile.html">Profile</a></a></li>
+            <li><a href="#codingGameSection"><a href="game.html">Gamecode</a></a></li>
+            <li><a href="leader.html">LeaderBoard</a></li>
+            <li><a href="#logoutSection"><a href="logout.html">Logout</a></li>
+            <!-- <img src="hack2.jpg" alt="Gamified LMS Logo"> -->
+        </ul>
+    </nav>
+<br>
+<br>
+<div id="game-container">
+    <div id="code-snippet"><b>CONST RESULT</b> = 5 + 3;</div>
+    <label for="guess-input">Your Guess:</label>
+    <input type="text" id="guess-input" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Check Guess</button>
+    <div id="result"></div>
+    <button id="next-button" onclick="loadNextQuestion()">Next Question</button>
+</div>
+<div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #game-container {
+      width: 50%;
+      margin: auto;
+      background-color: beige;
+    }
+
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    button:hover{
+        background-color: blue;
+    }
+    body:hover{
+        background-color: whitesmoke;
+    }
+  </style>
+  <title>Code Guessing Game</title>
+</head>
+<body>
+
+  <div id="game-container">
+    <h1>Code Guessing Game</h1>
+    <p>Guess the output of the following JavaScript code:</p>
+    <pre id="code-snippet">
+      <code>
+        // Problem 1
+        function addNumbers(a, b) {
+          return a + b;
+        }
+
+        const result1 = addNumbers(3, 5);
+        console.log(result1);
+      </code>
+    </pre>
+    <input type="text" id="userGuess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="result"></p>
+    <p id="score">Score: 0</p>
+  </div>
+
+  <script>
+    let currentProblem = 1;
+    let score = 0;
+
+    function checkGuess() {
+      const userGuess = document.getElementById('userGuess').value.trim();
+      let expectedOutput;
+
+      switch (currentProblem) {
+        case 1:
+          expectedOutput = '8';
+          break;
+        case 2:
+          expectedOutput = 'Hello, World!';
+          break;
+        case 3:
+          expectedOutput = '15';
+          break;
+        case 4:
+          expectedOutput = 'NaN';
+          break;
+        case 5:
+          expectedOutput = 'true';
+          break;
+        case 6:
+          expectedOutput = 'Programming';
+          break;
+        case 7:
+          expectedOutput = '3';
+          break;
+        case 8:
+          expectedOutput = 'false';
+          break;
+        case 9:
+          expectedOutput = 'null';
+          break;
+        case 10:
+          expectedOutput = '5';
+          break;
+        case 11:
+          expectedOutput = '25';
+          break;
+        default:
+          break;
+      }
+
+      if (userGuess === expectedOutput) {
+        document.getElementById('result').innerHTML = 'Congratulations! Your guess is correct!';
+        score++;
+      } else {
+        document.getElementById('result').innerHTML = 'Sorry, your guess is incorrect. Try again!';
+      }
+
+      // Display the next problem
+      currentProblem++;
+      updateScore();
+      displayNextProblem();
+    }
+
+    function updateScore() {
+      document.getElementById('score').innerHTML = Score: ${score};
+    }
+
+    function displayNextProblem() {
+      if (currentProblem <= 11) {
+        const codeSnippet = document.getElementById('code-snippet').getElementsByTagName('code')[0];
+        codeSnippet.innerHTML = getCodeSnippet(currentProblem);
+        document.getElementById('userGuess').value = '';
+        document.getElementById('result').innerHTML = '';
+      } else {
+        alert('Game Over! You completed all the problems.');
+      }
+    }
+
+    function getCodeSnippet(problemNumber) {
+      switch (problemNumber) {
+        case 2:
+          return `
+            // Problem 2
+            function greet() {
+              return 'Hello, World!';
+            }
+
+            const result2 = greet();
+            console.log(result2);
+          `;
+        case 3:
+          return `
+            // Problem 3
+            function multiplyNumbers(a, b) {
+              return a * b;
+            }
+
+            const result3 = multiplyNumbers(5, 3);
+            console.log(result3);
+          `;
+        case 4:
+          return `
+            // Problem 4
+            function divideNumbers(a, b) {
+              return a / b;
+            }
+
+            const result4 = divideNumbers(0, 0);
+            console.log(result4);
+          `;
+        case 5:
+          return `
+            // Problem 5
+            const x = 2 === '2';
+            console.log(x);
+          `;
+        case 6:
+          return `
+            // Problem 6
+            const word1 = 'Pro';
+            const word2 = 'gramming';
+            const concatenated = word1 + word2;
+            console.log(concatenated);
+          `;
+        case 7:
+          return `
+            // Problem 7
+            const num = '3' + 2;
+            console.log(num);
+          `;
+        case 8:
+          return `
+            // Problem 8
+            const a = 5 > 10;
+            console.log(a);
+          `;
+        case 9:
+          return `
+            // Problem 9
+            const variable = undefined;
+            console.log(variable);
+          `;
+        case 10:
+          return `
+            // Problem 10
+            const value = 2 * '2';
+            console.log(value);
+          `;
+        case 11:
+          return `
+            // Problem 11
+            function squareNumber(num) {
+              return num * num;
+            }
+
+            const result11 = squareNumber(5);
+            console.log(result11);
+          `;
+        default:
+          return ''; // Empty string if no more problems
+      }
+    }
+  </script>
+
+</body>
+</html>
+</div>
+    
+    <button onclick="checkAnswer()">Submit Answer</button>
+    
+    <div id="result"></div>
+    
+    <button id="nextButton" style="display:none" onclick="unlockNextDoor()">Unlock Next Door</button>
+    
+    <button id="tryAgainButton" style="display:none" onclick="tryAgain()">Try Again</button>
+
+
+
+
+<script>
+    const questions = [
+        { code: 'const result = 5 + 3;', answer: '8' },
+        { code: 'const x = 10; const y = 20; console.log(x + y);', answer: '30' },
+        { code: 'const name = "John"; console.log("Hello, " + name + "!");', answer: 'Hello, John!' },
+        { code: 'const numbers = [1, 2, 3, 4, 5]; console.log(numbers.length);', answer: '5' },
+        { code: 'let counter = 0; counter++; console.log(counter);', answer: '1' },
+        // Add more questions as needed
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function loadQuestion() {
+        const codeSnippetElement = document.getElementById("code-snippet");
+        const guessInput = document.getElementById("guess-input");
+        const resultElement = document.getElementById("result");
+        const nextButton = document.getElementById("next-button");
+
+        const currentQuestion = questions[currentQuestionIndex];
+
+        codeSnippetElement.textContent = currentQuestion.code;
+        guessInput.value = ''; // Clear previous guess
+        resultElement.textContent = '';
+        nextButton.style.display = 'none';
+    }
+
+    function checkGuess() {
+        const guessInput = document.getElementById("guess-input");
+        const resultElement = document.getElementById("result");
+        const nextButton = document.getElementById("next-button");
+
+        const userGuess = guessInput.value.trim().toLowerCase();
+        const currentQuestion = questions[currentQuestionIndex];
+
+        if (userGuess === currentQuestion.answer.toLowerCase()) {
+            resultElement.textContent = "Correct! Well done.";
+            nextButton.style.display = 'inline-block';
+        } else {
+            resultElement.textContent =" Wrong !!"
+            nextButton.style.display = 'inline-block';
+        }
+    }
+
+    function loadNextQuestion() {
+        const nextButton = document.getElementById("next-button");
+        nextButton.style.display = 'none';
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            document.getElementById("code-snippet").textContent = "Game Completed!";
+            document.getElementById("guess-input").style.display = "none";
+            document.getElementById("result").textContent = "";
+            nextButton.style.display = 'none';
+        }
+    }
+
+    // Initial load
+    loadQuestion();
+</script>
+
+</body>
+</html>

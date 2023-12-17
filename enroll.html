@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Courses</title>
+    <!-- Add any additional styles or meta tags as needed -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #coursesList {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="enrollButton" onclick="showCourses()">Enroll Courses</button>
+
+    <div id="coursesList">
+        <h2>Available Coding Languages:</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <!-- Add more languages as needed -->
+        </ul>
+    </div>
+
+    <script>
+        function showCourses() {
+            var coursesList = document.getElementById("coursesList");
+
+            // Toggle the visibility of the courses list
+            if (coursesList.style.display === "none") {
+                coursesList.style.display = "block";
+            } else {
+                coursesList.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

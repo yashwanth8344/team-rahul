@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Gamified LMS Portal</title>
+    <!-- You can link your CSS files and libraries here -->
+    <link rel="stylesheet" href="./Gamified LMS Portal_files/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="./Gamified LMS Portal_files/hack.jpg" alt="Gamified LMS Logo">
+        </div>
+        <h1>Welcome to the Gamified Learning Portal</h1>
+        <!-- ... (Other parts of your HTML) ... -->
+        
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#homeSection"></a><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#coursesSection"></a><a href="http://127.0.0.1:5500/corses.html">Courses</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#profileSection"></a><a href="http://127.0.0.1:5500/profile.html">Profile</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#codingGameSection"></a><a href="http://127.0.0.1:5500/game.html">Gamecode</a></li>
+                <li><a href="http://127.0.0.1:5500/leader.html">LeaderBoard</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#logoutSection"></a><a href="http://127.0.0.1:5500/logout.html">Logout</a></li>
+                <!-- <img src="hack2.jpg" alt="Gamified LMS Logo"> -->
+            </ul>
+        </nav>
+    </header>
+
+    
+                
+                <!-- <div class="accordion-item">
+                    <div class="accordion-header"><B></B></div>
+                    <div class="accordion-content">
+                        <p><b></b>Content for Section 3 goes here.</p>
+                    </div>
+                </div> -->
+            
+            <div class="notification-bar">
+                <p>Important announcement: New courses added! Check them out.</p>
+            </div>
+            <section class="featured-courses">
+                <h2>Featured Courses</h2>
+                <div class="course-card">
+                    <h3>Full Stack Web Development</h3>
+                    <p>Full-stack development refers to the practice of working on both the front end and back end of a web application or software. </p>
+                    <a href="http://127.0.0.1:5500/course1.html"></a><a href="http://127.0.0.1:5500/login2.html"><button>Enroll Now</button></a>
+                </div>
+                <div class="course-card">
+                    <h3>Machine Learning With Python</h3>
+                    <p>Machine learning with Python involves using Python programming language and various libraries and frameworks to build models that can learn patterns and make predictions or decisions based on data.</p>
+                    <a href="http://127.0.0.1:5500/course2.html"></a><a href="http://127.0.0.1:5500/login.html"><button>Enroll Now</button></a>
+                </div>
+                <!-- Add more course cards -->
+            </section>
+            
+                
+                <!-- More featured course cards -->
+            
+            
+            
+            <!-- More course cards can be added here -->
+        
+        <section class="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Email:</label>
+                    <input type="email" id="username" name="username" required="">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required="">
+                    <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+                </div>
+                <a href="http://127.0.0.1:5500/corses.html"><button>Login</button> Login</a>
+                <div class="forgot-password">
+                    <a href="http://127.0.0.1:5500/forgotpass.html">Forgot Password?</a>
+                </div>
+                <div class="signup">
+                    <p>Don't have an account?</p>
+                    <a href="http://127.0.0.1:5500/signup.html">Sign Up</a>
+                </div>
+            </form>
+        </section>
+        
+        
+          
+        <footer>
+            <p>© 2023 Gamified LMS. All rights reserved.</p>
+        </footer>
+        <script>
+            // Get all accordion items
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            // Add click event listener to each accordion header
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    // Toggle active class to expand/collapse content
+                    item.classList.toggle('active');
+                    const content = item.querySelector('.accordion-content');
+                    if (item.classList.contains('active')) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+            const form = document.querySelector('.login form');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const errorMessage = document.querySelector('.error-message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Validate username and password
+    if (usernameInput.value.trim() === '') {
+        displayError('Please enter a valid email');
+    } else if (passwordInput.value === '') {
+        displayError('Please enter your password');
+    } else {
+        // Proceed with login
+    }
+});
+
+function displayError(message) {
+    errorMessage.textContent = message;
+}
+
+
+        </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

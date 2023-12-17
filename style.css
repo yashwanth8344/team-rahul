@@ -1,0 +1,332 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/
+    /* opacity: 0.3; */
+}
+/* Updated CSS styles with background image */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* Adding background image */
+    /* background-image: url('hack3.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* background-image: url('.jpg');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 100;
+}
+h1{
+    text-align: center;
+}
+img{
+    opacity: 0.5;
+}
+
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* background-color:wheat; */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: url('hackerr.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+
+/* Header styles */
+header {
+    background-color:black;
+    color: #fff;
+    text-align: center;
+    /* opacity: 0.5; */
+    padding: 20px;
+    padding: 40px;
+    height: 190px;
+}
+nav ul li{
+    align-items: end;
+
+}
+
+header h1 {
+    margin-bottom: 10px;
+    align-items: end;
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    align-items: end;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration:none;
+
+}
+nav ul li a:hover{
+    text-decoration: dashed;
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Course card styles */
+.course-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.course-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 18px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background-color:gainsboro;
+}
+.button:hover{
+    background-color: red;
+}
+
+/* Progress styles */
+.progress-bar {
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 60%; /* Change this width based on progress */
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 3px;
+}
+
+/* CSS in style.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;   /* Ensures main takes up at least the viewport height */
+}
+
+.courses {
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto;
+}
+
+.course-card {
+    border: 1px solid #aeacac;
+    padding: 10px;
+    margin-bottom: 90px;
+}
+
+.login {
+    text-align: center;
+    width: 80% ; /* Adjust as needed */
+    width:auto;
+    margin: 20px auto;
+
+}
+
+.input-group {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #007bff;
+    text-decoration: none;
+}
+
+
+
+
+/* Style for accordion */
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  /* Style for accordion items */
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style for accordion headers */
+  .accordion-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style for accordion content */
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  /* Style for active (expanded) accordion header */
+  .accordion-item.active .accordion-header {
+    background-color: #e0e0e0;
+  }
+  
+
+  footer{
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
+    color: black;
+  }
+  /* button:hover{
+    background-color: #007bff;
+  } */
+/* Other styles... */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Aligns items at each end */
+    align-items: center; /* Vertically center items */
+    padding: 20px;
+}
+/* header:hover{
+    background-color:rgb(34, 120, 199);
+} */
+.logo-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for the navbar */
+}
+
+.navbar li {
+    margin-left: 20px; /* Adjust spacing between items */
+}
+
+.navbar li:first-child {
+    margin-left: auto; /* Pushes items to the right */
+}
+
+.navbar a {
+    text-decoration: none;
+    text-decoration: wavy;
+    color: #333;
+}
+
+
+/* Other styles... */
+.logo-container{
+    width: 6%;
+    height: 55%;
+    /* margin: 0%; */
+    /* padding: 50vh; */
+}
+
+.logo-container:hover {
+    background-color: #aeacac;
+}
+h1:hover{
+    /* background-color: blue; */
+    text-decoration: underline;
+}
+.login{
+    background-color:aliceblue;
+    backface-visibility: visible;
+}
+.courses{
+    background-color: aliceblue;
+    backface-visibility: visible;
+}

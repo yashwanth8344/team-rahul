@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Code Puzzle</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #nextButton, #tryAgainButton {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #nextButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #tryAgainButton {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="question">Welcome to the Escape Room! To unlock the first door, solve this coding challenge: Write a function to find the sum of all prime numbers below 20.</div>
+    
+    <label for="userAnswer">Your Answer:</label>
+    <input type="text" id="userAnswer">
+    
+    <br><br>
+    
+    <button onclick="checkAnswer()">Submit Answer</button>
+    
+    <div id="result"></div>
+    
+    <button id="nextButton" style="display:none" onclick="unlockNextDoor()">Unlock Next Door</button>
+    
+    <button id="tryAgainButton" style="display:none" onclick="tryAgain()">Try Again</button>
+
+    <script>
+        function checkAnswer() {
+            var userAnswer = document.getElementById('userAnswer').value;
+            // Check if the answer is correct
+            if (userAnswer.trim() === "77") {
+                document.getElementById('result').innerHTML = "Congratulations! That's correct!";
+                document.getElementById('nextButton').style.display = 'block';
+                document.getElementById('tryAgainButton').style.display = 'none';
+            } else {
+                document.getElementById('result').innerHTML = "Oops! That's incorrect. Try again!";
+                document.getElementById('tryAgainButton').style.display = 'block';
+                document.getElementById('nextButton').style.display = 'none';
+            }
+        }
+
+        function unlockNextDoor() {
+            // Customize this function to reveal the next challenge or door
+            alert("Congratulations! Door unlocked. Move on to the next challenge!");
+        }
+
+        function tryAgain() {
+            document.getElementById('result').innerHTML = "";
+            document.getElementById('tryAgainButton').style.display = 'none';
+            document.getElementById('nextButton').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
